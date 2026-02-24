@@ -1,0 +1,123 @@
+@use "./formPage/formPage.scss";
+@use "./listPage/listPage.scss";
+@use "./Auth/authPage.scss";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,
+               "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+ul, ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+
+img,
+picture,
+video {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+
+.text-small {
+    font-size: 0.6rem;
+}
+
+.icon-medium {
+    font-size: 1.5rem;
+}
+
+
+//LOADING Dots
+/* HTML: <div class="loader"></div> */
+.loader {
+    margin-top: 1rem;
+    width: 60px;
+    aspect-ratio: 4;
+    --_g: no-repeat radial-gradient(circle closest-side,#000 90%,#0000);
+    background: 
+      var(--_g) 0%   50%,
+      var(--_g) 50%  50%,
+      var(--_g) 100% 50%;
+    background-size: calc(100%/3) 100%;
+    animation: l7 1s infinite linear;
+  }
+
+  @keyframes l7 {
+      33%{background-size:calc(100%/3) 0%  ,calc(100%/3) 100%,calc(100%/3) 100%}
+      50%{background-size:calc(100%/3) 100%,calc(100%/3) 0%  ,calc(100%/3) 100%}
+      66%{background-size:calc(100%/3) 100%,calc(100%/3) 100%,calc(100%/3) 0%  }
+  }
+
+
+
+.mainNav {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: rgba(255, 127, 80, 0.322);
+    align-items: center;
+    width: 100%;
+    justify-content: start;
+
+    a, &-btn {
+      background-color: coral;
+      padding: 0.4rem 1rem;
+      border-radius: 6px;
+      border: none;
+      transition: all 0.2s;
+
+
+      &:hover {
+        box-shadow: 0 0 3px 1px #333333a2;
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+    }
+
+    &-btn {
+      background-color: transparent;
+      box-shadow: 0 0 3px 0px #333333a2;
+      transition: all 0.3s;
+    }
+
+
+
+    &-logo{
+      margin-left: auto;
+    }
+}
+

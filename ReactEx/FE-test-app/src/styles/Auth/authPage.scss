@@ -1,0 +1,33 @@
+.authPage-formContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.authPage-formWrapper {
+    width: 100%;
+    max-width: 26rem;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.637);
+    display: flex;
+    flex-direction: column;
+
+    &-icon {
+        font-size: 2.5rem;
+        color: #333;
+        align-self: center;
+        background-color: coral;
+        padding: 0.6rem 1.2rem;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background-color: rgba(255, 127, 80, 0.705);
+            transition: all 0.3s ease;
+        }
+    }
+}

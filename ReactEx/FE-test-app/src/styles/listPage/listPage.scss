@@ -1,0 +1,421 @@
+.listPage {
+    display: grid;
+    grid-template-columns: 18rem 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 8px;
+    padding: 1rem;
+    min-height: 100vh;
+}
+
+.list-header, .list-main, .list-menu {
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0px 0px 2px 0px #333;
+}
+
+
+//Header section #######################
+
+.list-header {
+    grid-column: span 2 / span 2;
+    max-height: 12rem;
+    text-align: center;
+    color: #333333e8;
+}
+
+
+
+
+//Menu section #######################
+
+
+
+.list-menu-list{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+
+.item-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem;
+    font-size: 0.9rem;
+    justify-content: space-between;
+    cursor: pointer;
+
+        &-text {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            display: ruby;
+        }
+
+        &-icon {
+            display: flex;
+        }
+
+        &-actionI-closed {
+            transform: rotate(-90deg);
+            transition: transform 0.3s ease;
+        }
+
+        &-actionI-open {
+            transform: rotate(0deg);
+            transition: transform 0.3s ease;
+        }
+}
+
+
+.list-menu-item{
+    display: flex;
+    flex-direction: column;
+}
+
+.list-menu-main-closed {
+    display: none;
+}
+
+.list-menu-main {
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: none;
+    box-shadow: 0 0 2px 0 #333;
+    background-color: #05004b;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: #fff;
+
+    &:hover {
+        transition: all 0.3s;
+        background-color: #0b0452e7;
+        cursor: pointer;
+    }
+}
+
+
+.list-menu-title {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+   
+}
+
+ .list-menu-title{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 0.4rem;
+
+    &-live {
+        background-color: rgb(255, 251, 0);
+        color: #333;
+        font-weight: bold;
+        border: 0.5px solid #333;
+        font-style: italic;
+        border-radius: 1px;
+        border-radius: 4px;
+        font-size: 0.6rem;
+        padding-inline: 0.4rem;
+    }
+
+     &-time {
+        font-size: 0.5rem;
+        background-color: #9ca2faec;
+        padding-inline: 0.4rem;
+        border-radius:2px;
+        --p: 4px;
+        clip-path: polygon(var(--p) 0,100% 0,calc(100% - var(--p)) 100%,0 100%);
+    }
+
+     &-txt {
+        font-size: 0.7rem;
+    }
+}
+
+
+.list-menu-team {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    color: #fff;
+
+    &-name {
+        font-size: 0.8rem;
+    }
+
+    &-count {
+        background-color: #9ca2faec;
+        padding: 0.1rem;
+        border-radius: 4px;
+        font-size: 0.6rem;
+        min-width: 1rem;
+        text-align: center;
+    }
+}
+
+
+.list-menu-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 1rem;
+
+    p {
+        font-weight: bold;
+    }
+
+    &-coff {
+        display: flex;
+        gap: 0.4rem;
+        align-items: center;
+        background-color: #9ca2faec;
+        text-align: center;
+        position: relative;
+        border-radius: 3px;
+        font-size: 0.8rem;
+        padding-inline: 1rem;
+        border: 1px solid #fff;
+
+        &-n {
+            position: absolute;
+            left: 0%;
+            top: 50%;
+            transform: translate(-50%, -50%);    
+            text-align: center;
+
+            background-color: #5964fdec;
+            padding-inline: 0.1rem;
+            border-radius: 2px;
+            font-size: 0.5rem;
+            min-width: 1rem;
+        }
+    }
+
+
+}
+
+
+
+//Main section #######################
+
+
+.list-main-header {
+    padding: 2rem 0.5rem;
+    border-radius: 6px;
+    border: none;
+    box-shadow: 0 0 2px 0 #333;
+    background-color: #05004b;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+
+    &-f {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.3rem;
+    }
+
+    &-teams {
+        width: 100%;
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+        font-weight: bold;
+        justify-content: center;
+
+        &-name {
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap:0.2rem;
+
+            span{
+                color: #9ca2faec;
+            }
+        }
+    }
+
+    
+    &-coffs{
+        display: flex;
+        gap: 1.4em;
+        width: 100%;
+        justify-content: center;
+
+        &-coff{
+            display: flex;
+            gap: 0.2rem;
+            align-items: center;
+            text-align: center;
+            font-size: 0.75rem;
+        }
+    }
+}
+
+.list-main-content-nav {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    color: #fff;
+
+    &-link, &-link-active {
+        padding: 0.4rem 0.6rem;
+        border-radius: 6px;
+        font-size: 0.7rem;
+    }
+
+    &-link {
+        background-color: #05004b;
+
+        &:hover {
+            box-shadow: 0px 0px 6px 0px #3a48ff;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+    }
+
+    &-link-active {
+        background-color: #3a48ff;
+
+        &:hover {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+    }
+}
+
+
+.list-main-content-list {
+    padding: 1rem;
+    border-radius: 6px;
+    border: 1px solid #333;
+    display: grid;
+    grid-template-columns: repeat(2,  1fr);
+    gap: 0.5rem;
+    background-color: #0e0572e7;
+
+    &-col {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+
+    &-item {
+        // padding: 0.4rem;
+        border-radius: 4px;
+        border: 1px solid #05004b;
+        color: #fff;
+
+        &-header {
+            background-color: #05004b;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            justify-content: space-between;
+            padding: 1rem;
+
+            &-icon-closed {
+                transform: rotate(-180deg);
+                transition: transform 0.3s ease;
+            }
+
+            &-icon-open {
+                transform: rotate(0deg);
+                transition: transform 0.3s ease;
+            }
+
+            &-name {
+                font-size: 0.8rem;
+                font-weight: bold;
+            }
+
+            &:hover {
+                transition: all 0.3s ease;
+                background-color: #0b0452e7;
+                cursor: pointer;
+            }
+        }
+
+        &-main-hidden {
+            height: 0 !important;
+            transition: all 0.3s;
+            overflow: hidden;
+        }
+
+        &-main{
+            transition: all 0.3s;
+            padding: 3rem 1rem 1rem 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.5rem;
+
+            &-coss-mid {
+                font-size: 0.7rem;
+                font-weight: bold;
+            }
+
+            &-coss-left, &-coss-right {
+                font-weight: bold;
+                position: relative;
+                background-color: #05004b;
+                padding: 0.5rem 1rem;
+                width: 100%;
+                text-align: center;
+                border-radius: 6px;
+                text-align: center;
+
+                span {
+                    position: absolute;
+                    top: -100%;
+                    transform: translateY(50%);
+                    font-size: 0.7rem;
+                }
+            }
+
+            &-coss-left {
+                &::after{
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 100%;
+                    width: 0.5rem;
+                    height: 1px;
+                    background-color: #ffffff9c;
+                }
+            }
+
+            &-coss-right {
+                &::after{
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    right: 100%;
+                    width: 0.5rem;
+                    height: 1px;
+                    background-color: #ffffff9c;
+                }
+            }
+        }   
+    }
+    
+}
+
+
+
+
